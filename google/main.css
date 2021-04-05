@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    margin: 0;
     height: 100vh;
     background-color: white;
     font-size: 14px;
