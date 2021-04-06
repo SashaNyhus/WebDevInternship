@@ -5,20 +5,39 @@ body {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
+    text-align: center;
+    font-family: HelveticNeue, sans-serif;
+    font-size: 14px;
+    color: #6a6d75;
 }
+
+/* header styles */
 header {
     display:flex;
     justify-content:space-between;
     align-items: center;
     width: 100%;
 }
+
+/* main content styles */
 .main-content {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+h2 {
+    font-family: "Cera Pro", sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #303236;
+}
+/* video */
 .video-container {
     position: relative;
+    width: 100%;
+    margin-bottom: 50px;
 }
-
 .video-text {
     position: absolute;
     top: 0;
@@ -30,4 +49,64 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+/* 3 steps */
+.steps {
+    width: 936px;
+    text-align: left;
+}
+.steps p {
+    font-family: "Cera Pro", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #6a6d75;
+}
+.step1, .step2, .step3 {
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    width: 50%;
+}
+.text-container {
+    width: 50%;
+}
+
+/* inside the box  */
+.inside-the-box {
+    background-image: url(images/inside-background.webp);
+    background-size: cover;
+    height: 1015px;
+    width: 1170px;
+    margin: 70px 0;
+}
+.inside-the-box .text-container {
+    background: white;
+    width: 840px;
+    padding: 56px 53px;
+    position: relative;
+    top: 56px;
+    margin: auto;
+}
+
+/* footers  */
+.top-footer {
+    background-color: #fafbfc;
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+}
+.top-footer .footer-box {
+    flex-grow: 1;
+}
+.media-links img {
+    height: 24px;
+}
+.bottom-footer {
+    background-color: #0f346c;
+    width: 100%;
+}
+.bottom-container {
+    display: flex;
 }
