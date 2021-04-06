@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     margin: 0;
     height: 100%;
@@ -64,6 +65,28 @@ a:hover {
 .right {
     justify-content: right;
 }
+
+/* search center styles */
+.search-center {
+    position: relative;
+    bottom: 20%;
+    width: 584px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-center form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchbar {
+    width: 584px;
+}
+#search {
+    width: 584px;
+}
+
 #sign-in {
     background: #1a73e8;
     width: 50px;
