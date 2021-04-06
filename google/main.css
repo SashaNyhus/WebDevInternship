@@ -1,10 +1,13 @@
+html {
+    height: 100%;
+}
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     font-size: 14px;
     font-family: arial, sans-serif;
@@ -14,13 +17,24 @@ header, footer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 4px;
 }
+
 header {
     align-self: flex-start;
 }
 footer {
     align-self: flex-end;
+}
+footer a {
+    margin: 0 15px;
+}
+footer .right, .left {
+    width: 333px;
+}
+footer .center a {
+    margin: 0 6px;
 }
 a {
     text-decoration: none;
@@ -32,11 +46,12 @@ a:hover {
     display: inline-flex;
 }
 .left {
-    align-self: flex-start;
+   justify-content: left; 
 }
 .center {
-    align-self: center;
+    justify-content: center;
 }
 .right {
-    align-self: flex-end;
+    justify-content: right;
 }
+
