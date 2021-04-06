@@ -13,15 +13,24 @@ body {
 
 /* header styles */
 header {
-    display:flex;
+    position: fixed;
+    z-index: 1;
+    display:inline-flex;
     justify-content:space-between;
     align-items: center;
+    height: 68px;
     width: 100%;
+    background-color: white;
+    border: 1px solid #6a6d75;
+}
+.left-header, .right-header {
+    margin: 105px;
 }
 
 /* main content styles */
 .main-content {
     width: 100%;
+    margin-top: 68px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,7 +115,22 @@ h2 {
 .bottom-footer {
     background-color: #0f346c;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .bottom-container {
-    display: flex;
+    width: 1200px;
+    padding: 50px;
+}
+.bottom-footer .footer-box {
+    width: 140px;
+    margin: 10px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+#right-footer {
+    float: right;
+    text-align: right;
 }
