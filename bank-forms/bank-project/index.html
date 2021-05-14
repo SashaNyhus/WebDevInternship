@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Banking</title>
+        <link rel="stylesheet" href="main.css">
+        <script type="module" src="modules/main.js"></script>
+    </head>
+    <body>
+        <div id="loading-screen">
+            <p id="loading-text">Loading</p>
+            <img id="loading-gif" src="images/loading-screen.gif" alt="loading gif">
+        </div>
+        <div class="background">
+            <img id="background-image" src="images/ledger.jpg" alt="" width="100%">
+        </div>
+        <h1>Really Secure Banking - We Promise</h1>
+        <div class="display-box">
+            <div id="start-menu">
+                <button id="goto-account-creation">Create A New Account</button>
+                <button id="goto-account-login">Log In</button>
+            </div>
+            <div class="account-select" id="account-creation">
+                <form id="account-creation-form" onsubmit="return window.createNewUser();">
+                    <label for="new-account-name">Name:</label>
+                    <input type="text" name="user" id="new-account-name">
+                    <span class="input-error" id="new-account-name-error"></span>
+                    <br>
+                    <label for="new-account-description">Description:</label>
+                    <textarea name="description" id="new-account-description"></textarea>
+                    <span class="input-error" id="new-account-description-error"></span>
+                    <br>
+                    <label for="new-account-currency">Currency:</label>
+                    <select name="currency" id="new-account-currency">
+                        <option value="$">$</option>
+                        <option value="€">€</option>
+                        <option value="¥">¥</option>
+                        <option value="£">£</option>
+                    </select>
+                    <span class="input-error" id="new-account-currency-error"></span>
+                    <br>
+                    <label for="new-account-balance">Starting Balance:</label>
+                    <input type="number" name="balance" id="new-account-balance">
+                    <span class="input-error" id="new-account-balance-error"></span>
+                    <br>
+                    <button type="submit" id="new-account-submit">Create Account</button>
+                    <button type="reset">Clear Form</button>
+                    <button type="button" id="account-creation-exit">Back</button>
+                    <p class="input-error" id="new-account-creation-error"></p>
+                </form>
+            </div>
+            <div class="account-select" id="account-login">
+                <label for="account-login-name">Name on the Account:</label>
+                <input type="text" name="account-login-name" id="account-login-name">
+                <span class="input-error" id="account-login-error"></span>
+                <button id="account-login-submit">Log In</button>
+                <button id="exit-account-login">Back</button>
+            </div>
+            <div id="transactions-page">
+                <h2 id="account-header">Welcome, User!</h2>
+                <p id="description-display"></p>
+                <h3>Transactions</h3>
+                <table id="transactions-table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Object</th>
+                        <th>Amount</th>
+                      </tr>
+                </table>
+                <button id="goto-new-transactions-page">Record new transaction</button>
+                <button id="logout-button">Log Out</button>
+            </div>
+            <div id="new-transactions-page">
+                <form id="transaction-entry-form" onsubmit="return window.logNewTransaction();">
+                    <label for="transaction-date">Date of transaction:</label> 
+                    <input type="datetime-local" name="date" id="transaction-date">
+                    <span class="input-error" id="transaction-date-error"></span>
+                    <br>
+                    <label for="transaction-object">Object of transaction:</label>
+                    <input type="text" name="object" id="transaction-object">
+                    <span class="input-error" id="transaction-object-error"></span>
+                    <br>
+                    <label for="transaction-amount">Amount of transaction</label>
+                    <input type="number" name="amount" id="transaction-amount">
+                    <span class="input-error" id="transaction-amount-error"></span>
+                    <button type="submit" id="new-transaction-submit">Submit</button>
+                    <button type="reset">Clear Form</button>
+                    <button type="button" id="new-transaction-exit">Back</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
